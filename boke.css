@@ -1,0 +1,116 @@
+/* 全局样式 */  
+body {  
+    font-family: 'Arial', sans-serif;  
+    color: #333;  
+    margin: 0;  
+    padding: 0;  
+}  
+  
+a {  
+    color: #007BFF;  
+    text-decoration: none;  
+    transition: color 0.3s ease;  
+} 
+
+#header h1 {  
+    margin: 0;  
+}
+
+a:hover {  
+    color: #0056b3;  
+}  
+  
+/* 头部样式 */  
+#header {  
+    background-color: #f5f5f5;  
+    padding: 20px;  
+    display: flex;  
+    justify-content: space-between; /* 在大屏幕上头部内容左右对齐 */  
+}  
+  
+#header p {  
+    margin: 0;  
+}  
+  
+#nav ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    display: flex;  
+    justify-content: flex-end; /* 导航菜单默认右对齐 */  
+}  
+  
+#nav li {  
+    margin-left: 10px;  
+}  
+  
+#nav a {  
+    display: block;  
+    padding: 5px 10px;  
+    border-bottom: 2px solid transparent;  
+    transition: border-bottom 0.3s ease;  
+}  
+  
+#nav a:hover {  
+    border-bottom: 2px solid #007BFF;  
+}  
+  
+/* 主要内容样式 */  
+main {  
+    margin: 20px;  
+}  
+  
+.article {  
+    margin-bottom: 20px;  
+    padding: 20px;  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+    background-color: #fff;  
+} 
+  
+/* 底部样式 */  
+#footer {  
+    background-color: #f5f5f5;  
+    padding: 20px;  
+    text-align: center;  
+    margin-top: 20px;  
+}  
+  
+#footer {  
+    background-color: #f5f5f5;
+    padding: 20px;  
+    text-align: center;    
+    left: 0;
+    bottom: 0;   
+    width: 100%;   
+} 
+
+h1, h2, h3 {  
+    margin-top: 0;  
+    font-weight: normal;  
+}
+
+
+@media screen and (max-width: 768px) {  
+    #header {  
+        flex-direction: column; /* 小屏幕上头部内容垂直堆叠 */  
+    }  
+  
+    #nav ul {  
+        justify-content: center; /* 小屏幕上导航菜单居中对齐 */  
+    }   
+  
+    /* 堆叠文章和侧边栏，可以如下设置 */  
+    main {  
+        display: block; /* 去除flex布局 */  
+    }  
+  
+    .article, #aside { /* 假设#aside是侧边栏的类名 */  
+        margin-bottom: 20px;  
+    }  
+  
+    /* 底部样式调整 */  
+    #footer {  
+        position: static; /* 去除固定定位 */  
+        margin-top: auto; /* 使用margin-top: auto可以将底部推到页面底部 */  
+    }   
+}
