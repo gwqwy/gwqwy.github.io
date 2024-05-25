@@ -103,7 +103,6 @@ a:hover {
   
     /* 底部样式调整 */  
     #footer {   
-        position: static; /* 去除固定定位 */
         margin-top: auto; /* 使用margin-top: auto可以将底部推到页面底部 */  
     }   
 }
